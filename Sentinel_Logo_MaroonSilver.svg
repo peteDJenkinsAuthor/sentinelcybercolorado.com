@@ -1,0 +1,73 @@
+<svg width="400" height="470" viewBox="0 0 160 188"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     aria-label="Sentinel Cyber Security Consulting — Brand Mark">
+  <title>Sentinel Cyber Security Consulting</title>
+  <defs>
+    <!-- Shield gradient: navy → deep dark red -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#4A0A10"/>
+      <stop offset="100%" stop-color="#2A0508"/>
+    </linearGradient>
+    <!-- S glyph gradient: gold → silver -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#F0F0F4"/>
+      <stop offset="100%" stop-color="#A0A0B0"/>
+    </linearGradient>
+    <filter id="sGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M 12,38 Q 12,12 38,12 L 122,12 Q 148,12 148,38 L 148,118 L 80,176 L 12,118 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Drop shadow -->
+  <path d="M 12,38 Q 12,12 38,12 L 122,12 Q 148,12 148,38 L 148,118 L 80,176 L 12,118 Z"
+        fill="#000000" opacity="0.30" transform="translate(3,5)"/>
+
+  <!-- Shield body -->
+  <path d="M 12,38 Q 12,12 38,12 L 122,12 Q 148,12 148,38 L 148,118 L 80,176 L 12,118 Z"
+        fill="url(#shieldGrad)"
+        stroke="url(#goldGrad)"
+        stroke-width="2.2"/>
+
+  <!-- Inner border inset -->
+  <path d="M 19,41 Q 19,20 41,20 L 119,20 Q 140,20 140,41 L 140,116 L 80,168 L 19,116 Z"
+        fill="none" stroke="#C0C0CC" stroke-width="0.5" opacity="0.28"/>
+
+  <!-- Scan lines (clipped to shield) -->
+  <g clip-path="url(#shieldClip)" opacity="0.06">
+    <line x1="12" y1="46"  x2="148" y2="46"  stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="60"  x2="148" y2="60"  stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="74"  x2="148" y2="74"  stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="88"  x2="148" y2="88"  stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="102" x2="148" y2="102" stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="116" x2="148" y2="116" stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="130" x2="148" y2="130" stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="144" x2="148" y2="144" stroke="#C0C0CC" stroke-width="1"/>
+    <line x1="12" y1="158" x2="148" y2="158" stroke="#C0C0CC" stroke-width="1"/>
+  </g>
+
+  <!-- S — circuit-trace stroke (nodes removed) -->
+  <path d="M 114,56 L 50,56 L 50,94 L 110,94 L 110,132 L 46,132"
+        fill="none"
+        stroke="url(#goldGrad)"
+        stroke-width="18"
+        stroke-linecap="square"
+        stroke-linejoin="miter"
+        filter="url(#sGlow)"/>
+
+  <!-- Top silver cap bar -->
+  <rect x="46" y="8" width="68" height="3.5" rx="1.75"
+        fill="#C0C0CC" opacity="0.85"/>
+
+  <!-- Shield tip chevron accent -->
+  <path d="M 72,170 L 80,178 L 88,170"
+        fill="none" stroke="#C0C0CC" stroke-width="1.5"
+        stroke-linejoin="round" opacity="0.45"/>
+</svg>
