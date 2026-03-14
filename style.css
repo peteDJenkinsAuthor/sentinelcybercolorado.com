@@ -110,7 +110,7 @@ nav{
 
 /* ── THREAT TICKER ── */
 .threat-bar{background:rgba(122,10,20,0.08);border-top:1px solid rgba(122,10,20,0.2);border-bottom:1px solid rgba(122,10,20,0.2);padding:20px 48px;overflow:hidden;}
-.threat-scroll{display:flex;gap:60px;animation:scroll-left 30s linear infinite;white-space:nowrap;}
+.threat-scroll{display:flex;gap:60px;animation:scroll-left 20s linear infinite;white-space:nowrap;}
 .threat-item{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(160,160,176,0.5);display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .threat-item::before{content:'▸';color:var(--crimson2);}
 @keyframes scroll-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
