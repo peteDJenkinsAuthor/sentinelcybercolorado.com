@@ -97,7 +97,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Free Assessment</a></li>
   </ul>
-  <div class="nav-burger" onclick="toggleNav()">
+  <div class="nav-burger" id="burgerBtn">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -376,10 +376,20 @@
   </ul>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleNav(){
+  var nav = document.getElementById('navLinks');
+  nav.classList.toggle('open');
+}
+var burger = document.getElementById('burgerBtn');
+if(burger){ burger.addEventListener('click', toggleNav); }
+// Close menu when a link is clicked
+document.querySelectorAll('#navLinks a').forEach(function(link){
+  link.addEventListener('click', function(){ 
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
 const tools=['Nmap','OpenVAS','Wazuh SIEM','Metasploit','Kali Linux','Nikto','Shodan','WPScan','Wireshark','Maltego','Burp Suite','OSINT Framework'];
 const tc=document.getElementById('tool-tags');
 tools.forEach(t=>{const s=document.createElement('span');s.textContent=t;s.style.cssText="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:1px;border:1px solid #2A1018;color:#8A8090;padding:4px 10px;border-radius:2px;";tc.appendChild(s);});
-function handleSubmit(e){e.preventDefault();const btn=e.target.querySelector('.form-submit');btn.textContent='Message Sent ✓';btn.style.background='#2A4A2A';setTimeout(()=>{btn.textContent='Send Message →';btn.style.background='';e.target.reset();},3000);}
-const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';}});},
+function handleSubmit(e){e.preventDefault();const btn=e.target.querySelector('.form-submit');btn.textContent='Message Sent ✓';btn.style.background='#2A4A2A';setTimeout(()=>{btn.
