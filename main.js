@@ -1,23 +1,26 @@
+/**
+ * Project: Cyber-Defense Interface
+ * Authors: Maktsho, Nokto, et alia.
+ * Tools: Kali Linux, Maltego, Nikto, Wireshark, etc.
+ * Description: Finalized Core Logic - Nav, Tools, & Contact.
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. SELECTORS (Matches your CSS classes exactly)
+    // ── 1. SELECTORS ──
     const burgerBtn = document.querySelector('.nav-burger');
     const navLinks = document.querySelector('.nav-links');
     const navBar = document.querySelector('nav');
     const contactForm = document.querySelector('.contact-form');
     const toolContainer = document.getElementById('tool-tags');
 
-    // 2. STYLE FIX (Ensures the hero grid doesn't block the button)
+    // ── 2. SYSTEM STYLING FIX ──
+    // Ensures the nav is always physically "on top" of the background grid
     if (navBar) {
-        navBar.style.zIndex = "9999";
-        navBar.style.position = "relative";
-    }
-    if (burgerBtn) {
-        burgerBtn.style.cursor = "pointer";
-        burgerBtn.style.pointerEvents = "auto";
+        navBar.style.position = 'fixed';
+        navBar.style.zIndex = '9999';
     }
 
-    // 3. DYNAMIC TOOL TAG GENERATION
+    // ── 3. DYNAMIC TOOL TAGS ──
     const tools = [
         'Nmap', 'OpenVAS', 'Wazuh SIEM', 'Metasploit', 'Kali Linux',
         'Nikto', 'Shodan', 'WPScan', 'Wireshark', 'Maltego', 'Burp Suite'
@@ -25,61 +28,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (toolContainer) {
         toolContainer.innerHTML = ''; 
-        tools.forEach(tool => {
-            const span = document.createElement('span');
-            span.textContent = tool;
-            span.style.cssText = `
-                font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 2px;
-                text-transform: uppercase; padding: 6px 12px; border: 1px solid rgba(122, 10, 20, 0.3);
-                color: #A0A0B0; border-radius: 2px; background: rgba(26, 12, 16, 0.4);
-                display: inline-block; margin: 4px;
-            `;
-            toolContainer.appendChild(span);
+        tools.forEach(t => {
+            const s = document.createElement('span');
+            s.textContent = t;
+            s.style.cssText = "font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase; padding:6px 12px; border:1px solid rgba(122,10,20,0.3); color:#A0A0B0; border-radius:2px; background:rgba(26,12,16,0.4); display:inline-block; margin:4px; transition:all 0.3s ease;";
+            toolContainer.appendChild(s);
         });
     }
 
-    // 4. THE NAVIGATION LOGIC
-    function toggleMenu(e) {
-        if (e) e.preventDefault();
+    // ── 4. NAVIGATION ENGINE ──
+    function toggleNav(e) {
+        if (e) e.preventDefault(); // Stop any default jumping
         if (!navLinks) return;
 
         const isOpen = navLinks.classList.toggle('open');
         
-        // Update Button State
-        if (burgerBtn) {
-            burgerBtn.setAttribute('aria-expanded', isOpen);
-            burgerBtn.classList.toggle('active'); // In case you add an X animation later
-        }
-
-        // Prevent background scroll
+        // Sync button ARIA for accessibility
+        if (burgerBtn) burgerBtn.setAttribute('aria-expanded', isOpen);
+        
+        // Prevent page scrolling when the overlay is active
         document.body.style.overflow = isOpen ? 'hidden' : '';
-        console.log("System: Mobile Menu Toggle -> " + (isOpen ? "OPEN" : "CLOSED"));
+        
+        console.log(`[SYSTEM] Mobile Menu: ${isOpen ? 'ACTIVE' : 'INACTIVE'}`);
     }
 
-    // 5. EVENT LISTENERS (GLOBAL DELEGATION FOR RELIABILITY)
+    // ── 5. GLOBAL EVENT DELEGATION ──
+    // This catches the click even if the user taps the inner icon spans
     document.addEventListener('click', (e) => {
-        // Check if the click hit the burger button or its inner elements
-        if (e.target.closest('.nav-burger')) {
-            toggleMenu(e);
-        }
+        const isBurger = e.target.closest('.nav-burger');
+        const isNavLink = e.target.closest('.nav-links a');
 
-        // Close menu if a link is clicked
-        if (e.target.closest('.nav-links a')) {
+        if (isBurger) {
+            toggleNav(e);
+        } else if (isNavLink) {
+            // Close menu if a link is clicked
             if (navLinks) navLinks.classList.remove('open');
             document.body.style.overflow = '';
         }
     });
 
-    // 6. FORM HANDLING
+    // ── 6. CONTACT FORM HANDLING ──
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const data = Object.fromEntries(new FormData(e.target));
+            console.log('Transmission received:', data);
             alert('Transmission Received. System will respond shortly.');
             e.target.reset();
         });
     }
 
-    // 7. SCROLL EFFECTS
+    // ── 7. SCROLL RESPONSE ──
     window.addEventListener('scroll', () => {
         if (!navBar) return;
         if (window.scrollY > 50) {
