@@ -223,6 +223,53 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 48px;d
 .footer-links a{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--silver);}
 
+/* --- Centering Logic --- */
+.contact-content-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This does the actual centering */
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.contact-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-dim, #A0A0B0);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-email {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.1rem;
+    color: #9B1020; /* Your Crimson Red */
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 1px solid rgba(155, 16, 32, 0.3);
+    background: rgba(155, 16, 32, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.contact-email:hover {
+    background: rgba(155, 16, 32, 0.15);
+    border-color: #9B1020;
+    color: #F4F2EE;
+    box-shadow: 0 0 20px rgba(155, 16, 32, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Ensure long emails don't break mobile screens */
+@media (max-width: 600px) {
+    .contact-email {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+        word-break: break-all;
+    }
+}
+
 /* ── MOBILE ── */
 @media(max-width:900px){
   nav{padding:0 24px;}
@@ -240,3 +287,4 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 48px;d
   .form-row{grid-template-columns:1fr;}
   footer{flex-direction:column;align-items:flex-start;padding:28px 24px;}
 }
+
