@@ -288,3 +288,67 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 48px;d
   footer{flex-direction:column;align-items:flex-start;padding:28px 24px;}
 }
 
+
+/* --- Sentinel Contact Styling --- */
+.contact {
+    padding: 100px 0;
+    background: transparent; /* Let the hero grid show through */
+}
+
+.contact .section-Inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the Title and Label */
+    text-align: center;
+}
+
+.contact-content-centered {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #808090;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2rem;
+    color: #9B1020;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 1px solid rgba(155, 16, 32, 0.4);
+    background: rgba(12, 6, 8, 0.6);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.contact-email:hover {
+    color: #fff;
+    background: #9B1020;
+    box-shadow: 0 0 30px rgba(155, 16, 32, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Specific styling for the <em> in your title */
+.section-title em {
+    color: #9B1020;
+    font-style: normal;
+    text-shadow: 0 0 10px rgba(155, 16, 32, 0.5);
+}
+
+/* Responsive Fix for small phones */
+@media (max-width: 480px) {
+    .contact-email {
+        font-size: 0.8rem;
+        padding: 12px 15px;
+        letter-spacing: 0;
+    }
+}
