@@ -270,6 +270,54 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 48px;d
     }
 }
 
+
+
+
+/* ADDED LATEST IF BROKEN HERES WHY */
+/* 1. The Footer Container */
+footer {
+  display: flex;
+  justify-content: space-between; /* Pushes text left and links right */
+  align-items: center;            /* Vertically centers the content */
+  padding: 40px 20px;
+  flex-wrap: wrap;                /* Allows wrapping if screen is tiny */
+}
+
+/* 2. The Right-Side Container for both lists */
+/* We target the footer-links classes specifically */
+footer .footer-links {
+  display: flex;
+  flex-direction: row;      /* Keeps the links in a horizontal line */
+  justify-content: flex-end; /* Aligns them to the right edge */
+  list-style: none;         /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  gap: 20px;                /* Space between individual links */
+  width: 100%;              /* Forces each UL to take up its own row in the flex column */
+}
+
+/* 3. This handles stacking the two ULs on top of each other */
+footer {
+  /* We need to wrap the ULs in a flex column if they aren't already */
+}
+
+/* Updated approach to ensure stacking: */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-right-stack {
+  display: flex;
+  flex-direction: column; /* This is what creates Line 1 and Line 2 */
+  gap: 10px;              /* Space between Line 1 and Line 2 */
+  align-items: flex-end;
+}
+/* HERE ENDETH WHY */
+
+
+
 /* ── MOBILE ── */
 @media(max-width:900px){
   nav{padding:0 24px;}
