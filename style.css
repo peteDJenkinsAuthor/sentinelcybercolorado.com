@@ -378,7 +378,7 @@ footer {
     transition: all 0.4s ease;
 }
 
-.contact-email:hover {
+.contact-0email:hover {
     color: #fff;
     background: #9B1020;
     box-shadow: 0 0 30px rgba(155, 16, 32, 0.6);
@@ -399,4 +399,12 @@ footer {
         padding: 12px 15px;
         letter-spacing: 0;
     }
+
+.privacy-navlink {
+    font-family: 'IBM Plex Mono', monospa>
+    font-size: 1.2rem;
+    color: #9B1020;
+    text-decoration: none;
+   }
+
 }
