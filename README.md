@@ -42,10 +42,6 @@ _
     Remote · Emergency Available
 
 
-
-## SERVICES
-
-
 ###  Tier 02 - Core
 
 **⦿ Security Hardening Package**
@@ -69,8 +65,6 @@ _
     Scope-Based Pricing
 
 
-
-## SERVICES
 
 ### Tier 03 - Recurring
 
