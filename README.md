@@ -1,5 +1,5 @@
-# *SENTINEL CYBER SECURITY CONSULTING*
-*Fort Collins, CO · Est. 2026*
+# SENTINEL CYBER SECURITY CONSULTING
+**Fort Collins, CO · Est. 2026**
 
 Enterprise-grade cybersecurity for small businesses and defense contractors.
 
@@ -8,8 +8,8 @@ No jargon.  No nonesense.  Just real protection — at prices that don't require
 _
 
 
-### *WHAT WE DO*
-  *Services Built for small businesses*
+## WHAT WE DO
+  **Services Built for small businesses**
 
 From a single vulnerability scan to full managed security — every service is priced for the businesses that actually make Colorado run.
 
