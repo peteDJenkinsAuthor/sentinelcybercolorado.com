@@ -121,12 +121,12 @@ _
 If your business works with the Department of Defense — directly or through the supply chain — CMMC 2.0 compliance is mandatory. Colorado has one of the densest defense contractor ecosystems in the country.
 Don't lose your contract because your cybersecurity wasn't documented.
 
-    **⦿ Gap analysis against CMMC 2.0 Level 1 & 2**
-    **⦿ NIST SP 800-171 control mapping**
-    **⦿ System Security Plan (SSP) development**
-    **⦿ POA&M creation and tracking**
-    **⦿ Remediation support and re-assessment**
-    **⦿ CUI handling guidance**
+    ⦿ Gap analysis against CMMC 2.0 Level 1 & 2
+    ⦿ NIST SP 800-171 control mapping
+    ⦿ System Security Plan (SSP) development
+    ⦿ POA&M creation and tracking
+    ⦿ Remediation support and re-assessment
+    ⦿ CUI handling guidance
 
 _
 
@@ -134,7 +134,7 @@ _
 ## ABOUT
   **Pete D. Jenkins — Founder, Sentinel Cyber Security Consulting**
 
-          *"The tools don't matter if the mind still believes it's not allowed to win."*
+          "The tools don't matter if the mind still believes it's not allowed to win."
 
 Pete Jenkins didn't come up through a corporate IT department.  He taught himself systems thinking the hard way — and learned that the fundamentals of network security, threat modeling, and understanding human behavior are universal skills that transfer everywhere.
 
