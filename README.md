@@ -70,10 +70,10 @@ _
 
 
 
-### SERVICES
-  **Tier 03 - Recurring**
+## SERVICES
 
-  
+### Tier 03 - Recurring
+
 **⦿ Managed SIEM Monitoring**
    Continuous log monitoring via Wazuh SIEM.  Threat detection, alerting, and monthly reports.  SOC experience without the SOC price tag.
 
