@@ -23,18 +23,21 @@ _
 
 **⦿ Vulnerability Scan Report**
    Full network and system scan identifying exposed ports, outdated software, and known CVEs.  Delivered as an actionable report — not a jargon dump.
+
   **$299** — $599
     Remote · 48hr Turnaround 
 
 
 **⦿ Website Security Audit**
    Comprehensive review of your web presence for SQL injection, XSS, misconfigured headers, exposed admin panels, and SSL issues.
+
   **$249** — $499
     Remote · All CMS
 
 
 **⦿ Malware Removal**
    Remote diagnosis and clean removal of malware, ransomware, and persistent threats.  System hardened post-removal to prevent reinfection.
+
   **$149** — $349
     Remote · Emergency Available
 
@@ -47,18 +50,21 @@ _
 
 **⦿ Security Hardening Package**
    Full configuration review and hardening of your network, endpoints, and cloud services.  Closes the gaps attackers exploit first.
+
   **$399** — $899
     Remote · SMB Focused
 
 
 **⦿ Compliance Readiness Assessment**
    Gap analysis against CMMC 2.0, HIPAA, PCI-DSS, or NIST 800-171. Detailed remediation roadmap included.
+
   **$599** — $1,500
     CMMC · HIPAA · PCI
 
 
 **⦿ Penetration Test**
    Authorized simulated attack against your network or web application.  Full report with severity ratings, proof-of-concept, and remediation steps.
+
   **$800** — $2,500
     Scope-Based Pricing
 
@@ -70,18 +76,21 @@ _
   
 **⦿ Managed SIEM Monitoring**
    Continuous log monitoring via Wazuh SIEM.  Threat detection, alerting, and monthly reports.  SOC experience without the SOC price tag.
+
   **$199** — $399/mo
     Wazuh · 24/7 Monitoring
 
 
 **⦿ Managed Patch Management**
    Automated monitoring and deployment of critical security patches across your endpoints.  Nothing falls through the cracks.
+
   **$99** — $149/mo
     Automated · Verified
 
 
 **⦿ Security Awareness Training**
    Monthly phishing simulations, employee training modules, and reporting.  Your people are your biggest vulnerability — let's fix that.
+
   **$150** — $299/mo
     Per-Team Pricing
 
